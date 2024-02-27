@@ -15,6 +15,18 @@ const NavigationMenu = () => {
       <MenuList>
         <MenuItem onClick={() => alert("Navigate to...")}>Page 1</MenuItem>
         <MenuItem onClick={() => alert("Navigate to...")}>Page 2</MenuItem>
+        <MenuItem as={Link} to="/">
+          Home
+        </MenuItem>
+        <MenuItem as={Link} to="/about-kendall">
+          About Kendall
+        </MenuItem>
+        <MenuItem as={Link} to="/contact-us">
+          Contact Us
+        </MenuItem>
+        <MenuItem as={Link} to="/services">
+          Services
+        </MenuItem>
         <MenuItem as={Link} to="/login">
           Login
         </MenuItem>
