@@ -1,14 +1,24 @@
-import React from "react";
-import { IconButton } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { IconButton, Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 import { FaBars } from "react-icons/fa";
 
 const NavigationMenu = () => {
-  // Handler for opening navigation will be added here
+  const [isOpen, setIsOpen] = useState(false);
+
   const handleToggle = () => {
-    console.log("Toggle navigation");
+    setIsOpen(!isOpen);
   };
 
-  return <IconButton variant="outline" aria-label="Open Menu" icon={<FaBars />} onClick={handleToggle} position="absolute" top={4} right={4} />;
+  return (
+    <Menu isOpen={isOpen}>
+      <MenuButton as={IconButton} variant="outline" aria-label="Open Menu" icon={<FaBars />} onClick={handleToggle} position="absolute" top={4} right={4} />
+      <MenuList>
+        <MenuItem onClick={() => alert("Navigate to...")}>Page 1</MenuItem>
+        <MenuItem onClick={() => alert("Navigate to...")}>Page 2</MenuItem>
+        <MenuItem onClick={() => alert("Navigate to...")}>Page 3</MenuItem>
+      </MenuList>
+    </Menu>
+  );
 };
 
 export default NavigationMenu;
