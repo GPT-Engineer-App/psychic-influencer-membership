@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import LoginForm from "../components/LoginForm";
-import { Box, Container, Heading, Text, VStack, StackDivider, Button, Image, useColorModeValue, SimpleGrid, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Container, Heading, Text, VStack, StackDivider, Button, Image, useColorModeValue, SimpleGrid, useBreakpointValue, Popover, PopoverTrigger, PopoverContent, Flex } from "@chakra-ui/react";
 import { FaCheck, FaCrown, FaStar, FaGem } from "react-icons/fa";
 
 const Index = () => {
@@ -47,11 +47,18 @@ const Index = () => {
 
   return (
     <Container maxW="container.xl" py={{ base: 12, md: 24 }}>
-      {!isLoggedIn && (
-        <Box mb={10}>
-          <LoginForm />
-        </Box>
-      )}
+      <Flex justifyContent="flex-end" pt={4}>
+        {!isLoggedIn && (
+          <Popover>
+            <PopoverTrigger>
+              <Button colorScheme="purple">Login</Button>
+            </PopoverTrigger>
+            <PopoverContent p={4}>
+              <LoginForm />
+            </PopoverContent>
+          </Popover>
+        )}
+      </Flex>
       <VStack spacing={{ base: 8, md: 10 }} textAlign="center">
         <Image borderRadius="full" boxSize="150px" src="https://images.unsplash.com/photo-1505358131519-deb04e8e7ae3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxLZW5kYWxsJTIwSGF1Z2h0JTIwcHN5Y2hpY3xlbnwwfHx8fDE3MDkwNzMyODF8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Kendall Haught" mb={4} />
         <Heading size="2xl">Join the Psychic Circle with Kendall Haught</Heading>
