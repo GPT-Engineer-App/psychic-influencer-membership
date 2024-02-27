@@ -22,22 +22,32 @@ const Index = () => {
 
   const tiers = [
     {
-      name: "Bronze Aura",
-      price: "9.99",
-      features: ["1 Free Question per Month", "Access to Basic Insights", "Member-Only Newsletter"],
+      name: "Double A Elite",
+      price: "44.44",
+      priceAnnual: "500",
+      features: ["Limited spots available (100)", "All benefits from Tiers A, B, and C", "Every 4 months 1 personalized tarot readings (50 minutes Video)"],
       icon: <FaStar />,
     },
     {
-      name: "Silver Spirit",
-      price: "29.99",
-      features: ["3 Free Questions per Month", "Access to In-Depth Insights", "Bi-Weekly Personal Readings", "10% Off All Services"],
+      name: "Premium",
+      price: "33.33",
+      priceAnnual: "270",
+      features: ["Limited spots available (200)", "Every 4 Months personalized tarot readings (30 minutes audio)", "All benefits from Tiers B and C", "Monthly Spells Book digital access", "Monthly Video spell guide tutorials", "Monthly 1 Guest webinars", "Weekly Bonus content", "Private Chat server", "Monthly Video Manifestation practice", "Monthly live sessions", "Monthly AMA sessions"],
       icon: <FaCrown />,
     },
     {
-      name: "Gold Soul",
-      price: "49.99",
-      features: ["Unlimited Questions", "All Access to Exclusive Insights", "Weekly Personal Readings", "20% Off All Services", "Priority Booking"],
+      name: "Standard",
+      price: "22.22",
+      priceAnnual: "200",
+      features: ["Choice of 3x a year tarot readings", "All benefits from Tier C", "Monthly Ritual/Spell digital guides", "Monthly Horoscope/astrology access", "Birthday shoutouts/Birthday ritual suggestions", "Monthly screensavers"],
       icon: <FaGem />,
+    },
+    {
+      name: "Basic",
+      price: "7.99",
+      priceAnnual: "75",
+      features: ["Newsletter", "Daily affirmations/weekly collective reading", "Exclusive discounts", "Monthly badge/sticker", "Monthly polls", "Private chat server", "Early access to new offerings"],
+      icon: <FaCheck />,
     },
   ];
 
