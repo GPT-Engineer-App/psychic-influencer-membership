@@ -77,7 +77,7 @@ const Index = () => {
         </Text>
       </VStack>
 
-      <Box mt={16} px={8}>
+      <SimpleGrid columns={4} spacing={5} mt={16} px={8}>
         {tiers.map((tier, index) => (
           <Box key={index} p={10} shadow="xl" borderWidth="1px" borderRadius="lg" bg={useColorModeValue("white", "gray.700")}>
             <VStack spacing={5} align="stretch">
@@ -98,7 +98,7 @@ const Index = () => {
             </VStack>
           </Box>
         ))}
-      </Box>
+      </SimpleGrid>
     </Container>
   );
 };
