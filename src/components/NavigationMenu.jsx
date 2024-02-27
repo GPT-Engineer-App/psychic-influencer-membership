@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { IconButton, Menu, MenuButton, MenuList, MenuItem, Link } from "@chakra-ui/react";
+import { IconButton, Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 
 const NavigationMenu = () => {
@@ -15,19 +16,19 @@ const NavigationMenu = () => {
       <MenuList>
         <MenuItem onClick={() => alert("Navigate to...")}>Page 1</MenuItem>
         <MenuItem onClick={() => alert("Navigate to...")}>Page 2</MenuItem>
-        <MenuItem as={Link} to="/">
+        <MenuItem as={Link} to="/" _hover={{ textDecoration: "none" }}>
           Home
         </MenuItem>
-        <MenuItem as={Link} to="/about-kendall">
+        <MenuItem as={Link} to="/about-kendall" _hover={{ textDecoration: "none" }}>
           About Kendall
         </MenuItem>
-        <MenuItem as={Link} to="/contact-us">
+        <MenuItem as={Link} to="/contact-us" _hover={{ textDecoration: "none" }}>
           Contact Us
         </MenuItem>
-        <MenuItem as={Link} to="/services">
+        <MenuItem as={Link} to="/services" _hover={{ textDecoration: "none" }}>
           Services
         </MenuItem>
-        <MenuItem as={Link} to="/login">
+        <MenuItem as={Link} to="/login" _hover={{ textDecoration: "none" }}>
           Login
         </MenuItem>
         <MenuItem onClick={() => alert("Navigate to...")}>Page 3</MenuItem>
