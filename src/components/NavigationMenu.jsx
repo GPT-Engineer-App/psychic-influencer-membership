@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IconButton, Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
+import { IconButton, Menu, MenuButton, MenuList, MenuItem, Link } from "@chakra-ui/react";
 import { FaBars } from "react-icons/fa";
 
 const NavigationMenu = () => {
@@ -15,6 +15,9 @@ const NavigationMenu = () => {
       <MenuList>
         <MenuItem onClick={() => alert("Navigate to...")}>Page 1</MenuItem>
         <MenuItem onClick={() => alert("Navigate to...")}>Page 2</MenuItem>
+        <MenuItem as={Link} to="/login">
+          Login
+        </MenuItem>
         <MenuItem onClick={() => alert("Navigate to...")}>Page 3</MenuItem>
       </MenuList>
     </Menu>
