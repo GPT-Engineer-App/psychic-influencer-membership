@@ -14,8 +14,7 @@ const NavigationMenu = () => {
     <Menu isOpen={isOpen}>
       <MenuButton as={IconButton} variant="outline" aria-label="Open Menu" icon={<FaBars />} onClick={handleToggle} position="absolute" top={4} right={4} />
       <MenuList>
-        <MenuItem onClick={() => alert("Navigate to...")}>Page 1</MenuItem>
-        <MenuItem onClick={() => alert("Navigate to...")}>Page 2</MenuItem>
+        {/* Removed placeholder menu items */}
         <MenuItem as={Link} to="/" _hover={{ textDecoration: "none" }}>
           Home
         </MenuItem>
@@ -31,7 +30,7 @@ const NavigationMenu = () => {
         <MenuItem as={Link} to="/login" _hover={{ textDecoration: "none" }}>
           Login
         </MenuItem>
-        <MenuItem onClick={() => alert("Navigate to...")}>Page 3</MenuItem>
+        {/* Removed placeholder menu item */}
       </MenuList>
     </Menu>
   );
