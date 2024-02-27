@@ -77,9 +77,9 @@ const Index = () => {
         </Text>
       </VStack>
 
-      <Box overflowX="auto" d="flex" mt={16} px={8}>
+      <Box mt={16} px={8}>
         {tiers.map((tier, index) => (
-          <Box key={index} p={10} shadow="xl" borderWidth="1px" borderRadius="lg" bg={useColorModeValue("white", "gray.700")} minW="320px" mr={index !== tiers.length - 1 ? 8 : 0}>
+          <Box key={index} p={10} shadow="xl" borderWidth="1px" borderRadius="lg" bg={useColorModeValue("white", "gray.700")}>
             <VStack spacing={5} align="stretch">
               <Feature title={tier.name} icon={tier.icon}>
                 <Text fontSize="5xl" fontWeight="bold">
